@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d7fd74f37679b44af25b72fb7c18f2, type: 3}
+  m_Name: Style2
+  m_EditorClassIdentifier: 
+  XSprite: {fileID: 21300000, guid: 3d7fc5268e810184cb8e282c90ac5f4b, type: 3}
+  XColor: {r: 0, g: 0.64705884, b: 0.90196085, a: 1}
+  OSprite: {fileID: 21300000, guid: 9f567caa505c758499b05292d236e666, type: 3}
+  OColor: {r: 0.8980393, g: 0.8313726, b: 0.027450982, a: 1}
