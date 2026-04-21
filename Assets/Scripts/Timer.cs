@@ -14,6 +14,8 @@ public class Timer : MonoBehaviour
     public bool IsRunning => _isRunning;
     private string _formattedTime;
 
+    public static Action<float> OnGameEnd;
+
     private void Start()
     {
         _isRunning = true;
@@ -87,5 +89,7 @@ public class Timer : MonoBehaviour
     private void OnWinGame(GameWinner context, Vector2 context1, Vector2 context2) 
     {
         PauseTimer();
+
+        OnGameEnd?.Invoke(_currentTime);
     }
 }
