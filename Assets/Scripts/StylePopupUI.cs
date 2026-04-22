@@ -5,6 +5,8 @@ public class StylePopupUI : MonoBehaviour
 {
     public StyleUI Style1;
 
+    public Button PlayButton;
+
     [Space]
 
     public GridLayoutGroup StyleParentGridLayout;
@@ -13,6 +15,8 @@ public class StylePopupUI : MonoBehaviour
 
     private void OnEnable()
     {
+        PlayButton.onClick.AddListener(() => { GameManager.Instance.LoadGameplayScene(); });
+
         Style1.OnClick();
 
         _windowSize.x = GetComponent<RectTransform>().rect.width;

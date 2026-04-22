@@ -76,7 +76,7 @@ public class Timer : MonoBehaviour
         _formattedTime = TimerText.text = string.Format("{0:00}:{1:00}", min, sec);
     }
 
-    public float GetRemainingTime()
+    public float GetTime()
     {
         return _currentTime;
     }

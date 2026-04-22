@@ -5,8 +5,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public GameObject StylePopup;
-
     [Space]
 
     public GameSettings[] PossibleStyles;
@@ -42,14 +40,14 @@ public class GameManager : MonoBehaviour
         ChosenStyle = PossibleStyles[style];
     }
 
-    public void ShowStylePopup() 
-    {
-        StylePopup.SetActive(true);
-    }
-
     public void LoadGameplayScene() 
     {
         SceneManager.LoadScene("GameplayScene");
+    }
+
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene("MenuScene");
     }
 
     public void ReloadScene() 

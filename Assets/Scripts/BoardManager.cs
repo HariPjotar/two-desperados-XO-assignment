@@ -14,6 +14,10 @@ public class BoardManager : MonoBehaviour
 
     public Image[] BoardLines;
 
+    public GameObject EndScreen;
+
+    public GameWinner Winner;
+
     private static readonly int[][] WinningLines = new int[][]
     {
         new int[] { 0, 1, 2 }, // top row
@@ -56,7 +60,12 @@ public class BoardManager : MonoBehaviour
                 Vector2 tile1Pos = tiles[line[0]].transform.position;
                 Vector2 tile2Pos = tiles[line[2]].transform.position;
 
-                OnWinGame?.Invoke(a == TileValue.X ? GameWinner.X : GameWinner.O, tile1Pos, tile2Pos);
+                GameWinner w = a == TileValue.X ? GameWinner.X : GameWinner.O;
+                Winner = w;
+
+                OnWinGame?.Invoke(w, tile1Pos, tile2Pos);
+                EndScreen.SetActive(true);
+
                 return;
             }
         }
@@ -66,6 +75,7 @@ public class BoardManager : MonoBehaviour
         {
             //vec2.zero because the context doesn't matter when it's a draw
             OnWinGame?.Invoke(GameWinner.DRAW, Vector2.zero, Vector2.zero);
+            EndScreen.SetActive(true);
         }
     }
 
