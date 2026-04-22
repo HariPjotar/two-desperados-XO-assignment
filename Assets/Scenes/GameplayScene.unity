@@ -2537,6 +2537,10 @@ PrefabInstance:
       propertyPath: EndScreen
       value: 
       objectReference: {fileID: 563908751}
+    - target: {fileID: 7157343241805078549, guid: 1c965d6cd7ca75846b6ac16e3c2e0651, type: 3}
+      propertyPath: EndScreenDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7370063616126357658, guid: 1c965d6cd7ca75846b6ac16e3c2e0651, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

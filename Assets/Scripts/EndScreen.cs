@@ -37,10 +37,10 @@ public class EndScreen : MonoBehaviour
         switch (winner)
         {
             case GameWinner.X:
-                EndText.text = $"<color={ColorUtility.ToHtmlStringRGBA(P1Color)}>Player 1 (X)</color> won the game!";
+                EndText.text = $"<color=#{ColorUtility.ToHtmlStringRGBA(P1Color)}>Player 1 (X)</color> won the game!";
                 break;
             case GameWinner.O:
-                EndText.text = $"<color={ColorUtility.ToHtmlStringRGBA(P2Color)}>Player 2 (O)</color> won the game!";
+                EndText.text = $"<color=#{ColorUtility.ToHtmlStringRGBA(P2Color)}>Player 2 (O)</color> won the game!";
                 break;
             default:
                 EndText.text = "Draw!";

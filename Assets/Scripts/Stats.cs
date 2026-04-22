@@ -47,7 +47,7 @@ public class Stats : MonoBehaviour
         Timer.OnGameEnd -= AddTime;
     }
 
-    private void LoadStats() 
+    public void LoadStats() 
     {
         Player1Wins = PlayerPrefs.GetInt(PLAYER1_WINS, 0);
         Player2Wins = PlayerPrefs.GetInt(PLAYER2_WINS, 0);

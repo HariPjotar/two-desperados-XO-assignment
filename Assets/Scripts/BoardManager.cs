@@ -9,14 +9,20 @@ using UnityEngine.UI;
 public class BoardManager : MonoBehaviour
 {
     public List<GameTile> Tiles;
-
     public Vector2 TilePadding = new Vector2(100f, 100f);
-
     public Image[] BoardLines;
+
+    [Space]
 
     public GameObject EndScreen;
 
+    [Space]
+
     public GameWinner Winner;
+
+    [Space]
+
+    public float EndScreenDelay;
 
     private static readonly int[][] WinningLines = new int[][]
     {
@@ -64,7 +70,7 @@ public class BoardManager : MonoBehaviour
                 Winner = w;
 
                 OnWinGame?.Invoke(w, tile1Pos, tile2Pos);
-                EndScreen.SetActive(true);
+                StartCoroutine(ShowEndScreenCoroutine(EndScreenDelay));
 
                 return;
             }
@@ -74,8 +80,9 @@ public class BoardManager : MonoBehaviour
         if (isDraw)
         {
             //vec2.zero because the context doesn't matter when it's a draw
-            OnWinGame?.Invoke(GameWinner.DRAW, Vector2.zero, Vector2.zero);
-            EndScreen.SetActive(true);
+            Winner = GameWinner.DRAW;
+            OnWinGame?.Invoke(GameWinner.DRAW, Vector2.zero + Vector2.left * 50, Vector2.zero + Vector2.left * 50);
+            StartCoroutine(ShowEndScreenCoroutine(EndScreenDelay));
         }
     }
 
@@ -105,6 +112,13 @@ public class BoardManager : MonoBehaviour
         {
             BoardLines[3].fillAmount = l;
         });
+    }
+
+    private IEnumerator ShowEndScreenCoroutine(float delay) 
+    {
+        yield return new WaitForSeconds(delay);
+
+        EndScreen.SetActive(true);
     }
 }
 public enum GameWinner 

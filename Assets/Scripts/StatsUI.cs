@@ -11,10 +11,12 @@ public class StatsUI : MonoBehaviour
 
     private void OnEnable()
     {
+        Stats.Instance.LoadStats();
+
         TotalTimesPlayed.text = Stats.Instance.TimesPlayed.ToString();
         P1Wins.text = Stats.Instance.Player1Wins.ToString();
         P2Wins.text = Stats.Instance.Player2Wins.ToString();
         Draws.text = Stats.Instance.Draws.ToString();
-        AverageGameTime.text = Stats.Instance.AverageGameTime.ToString();
+        AverageGameTime.text = Stats.Instance.AverageGameTime.ToString("0.00");
     }
 }

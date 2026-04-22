@@ -511,7 +511,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 250, y: 175}
+  m_CellSize: {x: 400, y: 175}
   m_Spacing: {x: 0, y: 30}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -3209,6 +3209,10 @@ PrefabInstance:
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3211623598363029646, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6170360467680609316, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4021,11 +4025,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3211623598363029646, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
       propertyPath: m_fontSize
-      value: 111.6
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3211623598363029646, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
       propertyPath: m_fontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211623598363029646, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6170360467680609316, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
       propertyPath: m_Pivot.x
@@ -5805,11 +5813,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3211623598363029646, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
       propertyPath: m_fontSize
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3211623598363029646, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
       propertyPath: m_fontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3211623598363029646, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6170360467680609316, guid: 072cf1f62fe147f49a6eeba42420f58e, type: 3}
       propertyPath: m_Pivot.x
