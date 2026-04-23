@@ -15,6 +15,7 @@ public class BoardManager : MonoBehaviour
     [Space]
 
     public GameObject EndScreen;
+    public AudioClip DrawLineAudio;
 
     [Space]
 
@@ -93,22 +94,34 @@ public class BoardManager : MonoBehaviour
         float k = 0;
         float l = 0;
 
-        DOTween.To(() => i, x => i = x, 1f, 0.65f).OnUpdate(() => 
+        DOTween.To(() => i, x => i = x, 1f, 0.65f).OnStart(() => 
+        {
+            AudioManager.Instance.PlaySFX(DrawLineAudio, true);
+        }).OnUpdate(() => 
         {
             BoardLines[0].fillAmount = i;
         });
 
-        DOTween.To(() => j, x => j = x, 1f, 0.65f).OnUpdate(() =>
+        DOTween.To(() => j, x => j = x, 1f, 0.65f).OnStart(() =>
+        {
+            AudioManager.Instance.PlaySFX(DrawLineAudio, true);
+        }).OnUpdate(() =>
         {
             BoardLines[1].fillAmount = j;
         }).SetDelay(0.2f);
 
-        DOTween.To(() => k, x => k = x, 1f, 0.65f).OnUpdate(() =>
+        DOTween.To(() => k, x => k = x, 1f, 0.65f).OnStart(() =>
+        {
+            AudioManager.Instance.PlaySFX(DrawLineAudio, true);
+        }).OnUpdate(() =>
         {
             BoardLines[2].fillAmount = k;
         });
 
-        DOTween.To(() => l, x => l= x, 1f, 0.65f).OnUpdate(() =>
+        DOTween.To(() => l, x => l= x, 1f, 0.65f).OnStart(() =>
+        {
+            AudioManager.Instance.PlaySFX(DrawLineAudio, true);
+        }).OnUpdate(() =>
         {
             BoardLines[3].fillAmount = l;
         });

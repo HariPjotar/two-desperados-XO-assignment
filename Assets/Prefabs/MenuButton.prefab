@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 6038726587323889135}
   - component: {fileID: 2201132624371675953}
   - component: {fileID: 1057268305374899483}
+  - component: {fileID: 8102993708704978112}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -379,3 +380,16 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &8102993708704978112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8562073719476215709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9e9068590c027449bfd4ee5d1e9aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClip: {fileID: 8300000, guid: 95d5426b22273b04da7db66a60819e3f, type: 3}

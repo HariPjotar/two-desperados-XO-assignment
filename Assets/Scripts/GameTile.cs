@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,11 +19,18 @@ public class GameTile : MonoBehaviour
 
     [Space]
 
+    public AnimationCurve DrawCurve;
+    public AudioClip XAudio;
+    public AudioClip OAudio;
+
+    [Space]
+
     private bool _isXTurn;
     private bool _wasClickedAlready;
     private bool _isGameOver = false;
 
     public static Action OnClickTile;
+    public static Action<TileValue> OnPlaceSymbol;
 
     private void Start()
     {
@@ -61,13 +69,18 @@ public class GameTile : MonoBehaviour
         {
             ValueImage.sprite = XSprite;
             Value = TileValue.X;
+            AudioManager.Instance.PlaySFX(XAudio);
         }
         else 
         {
             ValueImage.sprite = OSprite;
             Value = TileValue.O;
+            AudioManager.Instance.PlaySFX(OAudio);
         }
 
+        ValueImage.transform.DOScale(1.05f, 0.2f).SetEase(DrawCurve);
+
+        OnPlaceSymbol?.Invoke(Value);
         OnClickTile?.Invoke();
     }
 

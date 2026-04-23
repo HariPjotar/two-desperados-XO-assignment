@@ -157,6 +157,50 @@ MonoBehaviour:
   HoverImage: {fileID: 8279559448699183418}
   XSprite: {fileID: 0}
   OSprite: {fileID: 0}
+  DrawCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.52710634
+      value: 1.1258543
+      inSlope: -2.8786833
+      outSlope: -2.8786833
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.07493424
+    - serializedVersion: 3
+      time: 0.6823094
+      value: 0.91249627
+      inSlope: 3.771916
+      outSlope: 3.771916
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.06013814
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.8718148
+      outSlope: 1.8718148
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15516333
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  XAudio: {fileID: 8300000, guid: f95f967edc2b6604aae2ed43982845f6, type: 3}
+  OAudio: {fileID: 8300000, guid: 0e609f8b6af131147888c98de1c534ad, type: 3}
 --- !u!1 &4727648433361397827
 GameObject:
   m_ObjectHideFlags: 0
