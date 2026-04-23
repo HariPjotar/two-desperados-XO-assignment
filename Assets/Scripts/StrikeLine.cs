@@ -4,6 +4,9 @@ using DG.Tweening;
 
 public class StrikeLine : MonoBehaviour
 {
+    public AudioClip StrikeAudio;
+    public AudioClip DingAudio;
+
     private Image _fillImage;
 
     public void Start()
@@ -23,7 +26,10 @@ public class StrikeLine : MonoBehaviour
         transform.position = tile1Pos;
         transform.up = tile1Pos - tile2Pos;
 
-        if(context.Equals(GameWinner.X))
+        AudioManager.Instance.PlaySFX(StrikeAudio);
+        AudioManager.Instance.PlaySFX(DingAudio);
+
+        if (context.Equals(GameWinner.X))
             _fillImage.color = GameManager.Instance.ChosenStyle.XColor;
         else
             _fillImage.color = GameManager.Instance.ChosenStyle.OColor;

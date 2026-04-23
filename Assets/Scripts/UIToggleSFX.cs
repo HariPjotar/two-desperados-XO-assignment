@@ -6,6 +6,12 @@ public class UIToggleSFX : XOUIToggle
     {
         base.Start();
         OnToggle.AddListener(() => { AudioManager.Instance.MuteSFX(); });
+
+        if(AudioManager.Instance.SFXSource.volume <= 0)
+        {
+            IsOn = false;
+            ToggleImages();
+        }
     }
 
     private void OnDestroy()

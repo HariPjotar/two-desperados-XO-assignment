@@ -172,35 +172,36 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.52710634
       value: 1.1258543
-      inSlope: -2.8786833
-      outSlope: -2.8786833
+      inSlope: -15.393036
+      outSlope: -15.393036
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.015328986
       outWeight: 0.07493424
     - serializedVersion: 3
       time: 0.6823094
       value: 0.91249627
-      inSlope: 3.771916
-      outSlope: 3.771916
+      inSlope: 15.562212
+      outSlope: 15.562212
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.06013814
+      outWeight: 0.025475781
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1.8718148
-      outSlope: 1.8718148
+      inSlope: 6.4251046
+      outSlope: 6.4251046
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.15516333
+      inWeight: 0.08182438
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   XAudio: {fileID: 8300000, guid: f95f967edc2b6604aae2ed43982845f6, type: 3}
   OAudio: {fileID: 8300000, guid: 0e609f8b6af131147888c98de1c534ad, type: 3}
+  GenericAudio: {fileID: 8300000, guid: cfe86c161fc5b1c438431bad69d55b1d, type: 3}
 --- !u!1 &4727648433361397827
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,13 +268,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: f2b6685c84f52e3459c6794604a79078, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8279559448699183418

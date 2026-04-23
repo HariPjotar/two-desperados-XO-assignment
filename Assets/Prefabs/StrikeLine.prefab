@@ -88,5 +88,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1d07ff6580e614588b64f2c7e7d337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XWinColor: {r: 0.8301887, g: 0.25202343, b: 0.21537916, a: 1}
-  OWinColor: {r: 0.26032397, g: 0.6636715, b: 0.8490566, a: 1}
+  StrikeAudio: {fileID: 8300000, guid: 110a0034ee236a944ba5b82d8469e010, type: 3}
+  DingAudio: {fileID: 8300000, guid: ff7acdb12e390c345941b25e3dc47b90, type: 3}

@@ -38,7 +38,7 @@ public class XOUIToggle : MonoBehaviour
             AudioManager.Instance.PlaySFX(Audio);
     }
 
-    private void ToggleImages() 
+    protected void ToggleImages() 
     {
         if (IsOn) 
         {

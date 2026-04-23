@@ -10,19 +10,25 @@ public class StyleUI : MonoBehaviour
 
     public Image SelectedImage;
 
+    [Space]
+
+    public AudioClip ClickAudio;
+
     private void Start()
     {
-        StyleUI.OnClickStyle += DeactivateSelectedImage;
+        OnClickStyle += DeactivateSelectedImage;
     }
 
     private void OnDestroy()
     {
-        StyleUI.OnClickStyle -= DeactivateSelectedImage;
+        OnClickStyle -= DeactivateSelectedImage;
     }
 
     public void OnClick() 
     {
         OnClickStyle?.Invoke(StyleID);
+
+        AudioManager.Instance.PlaySFX(ClickAudio);
 
         SelectedImage.enabled = true;
     }

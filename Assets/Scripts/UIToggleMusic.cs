@@ -6,6 +6,12 @@ public class UIToggleMusic : XOUIToggle
     {
         base.Start();
         OnToggle.AddListener(() => { AudioManager.Instance.MuteMusic(); });
+
+        if (AudioManager.Instance.MusicSource.volume <= 0)
+        {
+            IsOn = false;
+            ToggleImages();
+        }
     }
 
     private void OnDestroy()

@@ -22,6 +22,7 @@ public class GameTile : MonoBehaviour
     public AnimationCurve DrawCurve;
     public AudioClip XAudio;
     public AudioClip OAudio;
+    public AudioClip GenericAudio;
 
     [Space]
 
@@ -70,18 +71,33 @@ public class GameTile : MonoBehaviour
             ValueImage.sprite = XSprite;
             Value = TileValue.X;
             AudioManager.Instance.PlaySFX(XAudio);
+            DoDrawValueAnimation();
         }
         else 
         {
             ValueImage.sprite = OSprite;
             Value = TileValue.O;
             AudioManager.Instance.PlaySFX(OAudio);
+            DoDrawValueAnimation();
         }
+
+        AudioManager.Instance.PlaySFX(GenericAudio);
 
         ValueImage.transform.DOScale(1.05f, 0.2f).SetEase(DrawCurve);
 
         OnPlaceSymbol?.Invoke(Value);
         OnClickTile?.Invoke();
+    }
+
+    private void DoDrawValueAnimation() 
+    {
+        float amount = 0;
+        ValueImage.fillAmount = amount;
+
+        DOTween.To(() => amount, x => amount = x, 1f, 0.35f).OnUpdate(() => 
+        {
+            ValueImage.fillAmount = amount;
+        });
     }
 
     private void LoadStyle() 
